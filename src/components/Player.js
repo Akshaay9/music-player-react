@@ -94,15 +94,18 @@ playAudio(isPlaying,audioRef)
         {/* {Time } */}
         <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
+<div className="track">
             <input
             value={songInfo.currentTime}
             
             type="range"
-            max={songInfo.duration || 0}
+            max={  songInfo.duration || 0}
             min={0}
             onChange={dragHandler}
           />
-            <p>{getTime(songInfo.duration)}</p>
+          <div className="animate-track"></div>
+          </div>
+            <p>{ songInfo.duration?getTime(songInfo.duration):"0:00"}</p>
         </div>
 
         {/* {forward icons adding dynamically} */}
