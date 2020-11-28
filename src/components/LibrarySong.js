@@ -1,4 +1,5 @@
 import React from 'react';
+import {playAudio} from "../util"
 
 
 function LibrarySong({song,setCurrentSong,songs,id,audioRef,isPlaying,setSongs}) {
@@ -25,18 +26,10 @@ function LibrarySong({song,setCurrentSong,songs,id,audioRef,isPlaying,setSongs})
             setSongs(newSong)
 // add active  state
 
+playAudio(isPlaying,audioRef)
 
 
 
-        if(isPlaying){
-const playPromise=audioRef.current.play()
-if(playPromise!==undefined)
-{
-playPromise.then((audio)=>{
-    audioRef.current.play()
-})
-}
-        }
     }
     return (
         <div>

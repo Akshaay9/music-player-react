@@ -5,6 +5,7 @@ faAngleLeft,
 faAngleRight, 
 faPause
 } from "@fortawesome/free-solid-svg-icons"
+import {playAudio} from "../util"
 
 function Player({currentSong,isPlaying,setIsPlaying,audioRef,setSongInfo,songInfo,songs,setCurrentSong,setSongs} ) {
 
@@ -83,6 +84,7 @@ if((currentIndex-1)%songs.length===-1)
           setCurrentSong(songs[(currentIndex-1)%songs.length])
         
 }
+playAudio(isPlaying,audioRef)
     }
 
     return (

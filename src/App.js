@@ -2,7 +2,7 @@ import React,{useRef,useState} from 'react';
 import "./styles/app.scss"
 import Song from "../src/components/Song"
 import Player from "../src/components/Player"
-import data from "./util"
+import data from "./data"
 import Library from "./components/Library"
 import Nav from "./components/Nav"
 
