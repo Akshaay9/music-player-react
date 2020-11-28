@@ -77,6 +77,8 @@ setCurrentSong(songs[(currentIndex+1)%songs.length])
 if((currentIndex-1)%songs.length===-1)
 {
   setCurrentSong(songs[songs.length-1])
+  playAudio(isPlaying,audioRef)
+
   return;
 }
 
